@@ -1,0 +1,7 @@
+name: ModdedVerseAPI
+version: 1.0.2
+main: com.moddedverse.api.ModdedVerseAPI
+api-version: 26.2
+author: M1xed
+description: Custom API for ModdedVerse
+load: STARTUP

@@ -1,13 +1,11 @@
 package com.moddedverse.api;
 
 import com.moddedverse.api.item.ItemAPI;
+import org.bukkit.plugin.java.JavaPlugin;
 
-public final class ModdedVerseAPI {
+public final class ModdedVerseAPI extends JavaPlugin {
 
     private static ItemAPI itemAPI;
-
-    private ModdedVerseAPI() {
-    }
 
     public static ItemAPI items() {
         if (itemAPI == null) {
