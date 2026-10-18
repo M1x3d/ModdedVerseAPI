@@ -2,12 +2,14 @@ package com.moddedverse.api;
 
 import com.moddedverse.api.block.BlockAPI;
 import com.moddedverse.api.item.ItemAPI;
+import com.moddedverse.api.mob.MobAPI;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ModdedVerseAPI extends JavaPlugin {
 
     private static ItemAPI itemAPI;
     private static BlockAPI blockAPI;
+    private static MobAPI mobAPI;
 
     public static ItemAPI items() {
         if (itemAPI == null) {
@@ -25,6 +27,15 @@ public final class ModdedVerseAPI extends JavaPlugin {
         }
 
         return blockAPI;
+    }
+
+    public static MobAPI mobs() {
+        if (mobAPI == null) {
+            throw new IllegalStateException(
+                    "ModdedMobs is not loaded or has not registered its MobAPI.");
+        }
+
+        return mobAPI;
     }
 
     /**
@@ -47,6 +58,16 @@ public final class ModdedVerseAPI extends JavaPlugin {
 
         blockAPI = api;
     }
+    /**
+     * Called ONLY by ModdedMobs.
+     */
+    public static void registerMobAPI(MobAPI api) {
+        if (mobAPI != null) {
+            throw new IllegalStateException("MobAPI has already been registered.");
+        }
+
+        mobAPI = api;
+    }
 
     /**
      * Called when ModdedVerseItems disables.
@@ -60,5 +81,12 @@ public final class ModdedVerseAPI extends JavaPlugin {
      */
     public static void unregisterBlockAPI() {
         blockAPI = null;
+    }
+
+    /**
+     * Called when ModdedMobs disables.
+     */
+    public static void unregisterMobAPI() {
+        mobAPI = null;
     }
 }
