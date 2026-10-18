@@ -6,13 +6,15 @@ import java.util.Collection;
 
 public interface ItemAPI {
 
-    ItemStack create(CustomItem item);
+    ItemStack create(CustomItem customItem);
 
-    ItemStack create(CustomItem item, int amount);
+    ItemStack create(CustomItem customItem, int amount);
 
-    boolean isCustomItem(ItemStack item);
+    boolean isCustomItem(ItemStack itemStack);
 
-    CustomItem getCustomItem(ItemStack item);
+    CustomItem getCustomItem(ItemStack itemStack);
+
+    boolean checkIfMatch(ItemStack itemStack, CustomItem customItem);
 
     Collection<CustomItem> getRegisteredItems();
 }

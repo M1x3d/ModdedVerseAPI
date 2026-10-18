@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.moddedverse"
-version = "1.0.2"
+version = "1.0.3"
 description = "ModdedVerseAPI"
 
 repositories {
@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:26.2.build.+")
+    compileOnly("io.papermc.paper:paper-api:26.3.build.+")
 }
 
 java {
