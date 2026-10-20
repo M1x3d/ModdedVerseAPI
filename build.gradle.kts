@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.moddedverse"
-version = "1.0.4"
+version = "1.0.6"
 description = "ModdedVerseAPI"
 
 repositories {
