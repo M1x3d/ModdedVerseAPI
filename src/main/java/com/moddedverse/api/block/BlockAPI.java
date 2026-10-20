@@ -20,6 +20,8 @@ public interface BlockAPI {
     CustomBlock getCustomBlock(ItemStack itemStack);
     CustomBlock getCustomBlock(NoteBlock noteBlock);
 
+    ItemStack getItemDrop(ItemStack tool, CustomBlock customBlock);
+
     boolean checkIfMatch(ItemStack itemStack, CustomBlock customBlock);
     boolean checkIfMatch(NoteBlock noteBlock, CustomBlock customBlock);
 
