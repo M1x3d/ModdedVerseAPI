@@ -22,10 +22,14 @@ public interface BlockAPI {
     CustomBlock getCustomBlock(ItemStack itemStack);
     CustomBlock getCustomBlock(NoteBlock noteBlock);
 
-    ItemStack getItemDrop(ItemStack tool, CustomBlock customBlock);
-
     boolean checkIfMatch(ItemStack itemStack, CustomBlock customBlock);
     boolean checkIfMatch(NoteBlock noteBlock, CustomBlock customBlock);
+
+    ItemStack getItemDrop(ItemStack tool, CustomBlock customBlock);
+
+    void playPlaceSound(CustomBlock block, Location location);
+    void playMiningSound(CustomBlock block, Location location);
+    void playBreakSound(CustomBlock block, Location location);
 
     Collection<CustomBlock> getRegisteredBlocks();
 }
