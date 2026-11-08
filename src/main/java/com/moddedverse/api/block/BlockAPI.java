@@ -1,6 +1,7 @@
 package com.moddedverse.api.block;
 
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.data.type.NoteBlock;
 import org.bukkit.inventory.ItemStack;
@@ -27,9 +28,11 @@ public interface BlockAPI {
 
     ItemStack getItemDrop(ItemStack tool, CustomBlock customBlock);
 
-    void playPlaceSound(CustomBlock block, Location location);
-    void playMiningSound(CustomBlock block, Location location);
-    void playBreakSound(CustomBlock block, Location location);
+    float getBreakTime(Material tool, CustomBlock customBlock);
+
+    void playPlaceSound(CustomBlock customBlock, Location location);
+    void playMiningSound(CustomBlock customBlock, Location location);
+    void playBreakSound(CustomBlock customBlock, Location location);
 
     Collection<CustomBlock> getRegisteredBlocks();
 }
