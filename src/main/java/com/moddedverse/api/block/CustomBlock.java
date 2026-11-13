@@ -38,9 +38,9 @@ public enum CustomBlock {
 
     FIR_PLANKS,
 
-    DARK_LOG,
+    ASHEN_LOG,
 
-    DARK_PLANKS,
+    ASHEN_PLANKS,
 
     FIR_LEAVES,
 
@@ -66,6 +66,6 @@ public enum CustomBlock {
     TITANIUM_ORE,
     TITANIUM_BLOCK,
 
-    DARK_ORE;
+    UMBRAL_ORE;
 
 }
